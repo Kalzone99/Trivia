@@ -5,9 +5,11 @@ import lottieGo from "./assets/lotties/triviaGO.json";
 import lottieThinking from "./assets/lotties/triviathink.json";
 import { VscSettingsGear } from "react-icons/vsc";
 import { PiRankingDuotone } from "react-icons/pi";
+import { Settings } from "./components/settings";
 
 function App() {
   const [stepPage, setStepPage] = useState(1);
+  const [modalInfo, setModalInfo] = useState(false);
 
   useEffect(() => {
     const text = document.querySelector(".typing-text");
@@ -31,6 +33,9 @@ function App() {
   const handleStep = () => {
     setStepPage(stepPage + 1);
   };
+  const handleModalInfo = () => {
+    setModalInfo(true);
+  };
 
   return (
     <div className="min-h-screen flex w-full items-center justify-center text-center bg-gradient-to-r from-purple-900 to-blue-400 relative">
@@ -49,12 +54,14 @@ function App() {
       )}
       {stepPage === 2 && (
         <>
-          <div className="absolute w-full px-10 top-10 flex flex-rows items-center justify-between text-white cursor-pointer">
-            <div>
+          <div className="absolute w-full px-10 top-10 flex flex-rows items-center justify-between text-white ">
+            <div className="flex flex-col justify-center items-center gap-1 cursor-pointer">
               <PiRankingDuotone size={60} />
               <div>Rankings</div>
             </div>
-            <div>
+            <div
+              className="flex flex-col justify-center items-center gap-1 cursor-pointer"
+              onClick={handleModalInfo}>
               <VscSettingsGear size={60} />
               <div>Settings</div>
             </div>
@@ -69,6 +76,7 @@ function App() {
           </div>
         </>
       )}
+      <Settings modalInfo={modalInfo} setModalInfo={setModalInfo} />
     </div>
   );
 }
