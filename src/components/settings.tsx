@@ -6,18 +6,36 @@ import { categories } from "../utils/categories";
 type SettingsProps = {
   modalInfo: boolean;
   setModalInfo: (value: SetStateAction<boolean>) => void;
+  category: number;
+  setCategory: (value: SetStateAction<number>) => void;
+  numberOfQuestions: number;
+  setNumberOfQuestions: (value: SetStateAction<number>) => void;
+  difficulty: string;
+  setDifficulty: (value: SetStateAction<string>) => void;
+  type: string;
+  setType: (value: SetStateAction<string>) => void;
 };
-export const Settings = ({ modalInfo, setModalInfo }: SettingsProps) => {
-  const [category, setCategory] = useState(0);
-  const [numberOfQuestions, setNumberOfQuestions] = useState(5);
-  const [difficulty, setDifficulty] = useState("Any Difficulty");
-  const [type, setType] = useState("any");
-
+export const Settings = ({
+  modalInfo,
+  setModalInfo,
+  category,
+  setCategory,
+  numberOfQuestions,
+  setNumberOfQuestions,
+  difficulty,
+  setDifficulty,
+  type,
+  setType,
+}: SettingsProps) => {
   const totalOfQuestions = [5, 10, 15, 20, 25, 30, 40, 50];
-  const difficulties = ["Easy", "Medium", "Hard"];
+  const difficulties = ["any", "easy", "medium", "hard"];
 
   const capitalizeFirstLetter = (string: string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
+  };
+
+  const SaveSettings = () => {
+    setModalInfo(false);
   };
 
   return (
@@ -81,7 +99,9 @@ export const Settings = ({ modalInfo, setModalInfo }: SettingsProps) => {
             <option value={"boolean"}>True Or False</option>
           </select>
         </label>
-        <button className="bg-blue-600 w-full py-2 rounded-lg text-white cursor-pointer hover:bg-blue-900">
+        <button
+          className="bg-blue-600 w-full py-2 rounded-lg text-white cursor-pointer hover:bg-blue-900"
+          onClick={SaveSettings}>
           Save Settings
         </button>
       </div>
