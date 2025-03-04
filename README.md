@@ -27,11 +27,11 @@ Tailwind CSS – Modern, utility-first CSS framework for styling.
 
 The project will be deployed soon! In the meantime, you can run it locally:
 
-1. **Clone the repository:**
+1️⃣ **Clone the repository**
    ```bash
    git clone https://github.com/your-username/trivia-app.git
-   
-2. **Navigate to the project directory:**
+```   
+2️⃣ **Navigate to the project folder**
 
   ```bash
     cd trivia-app
