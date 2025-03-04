@@ -1,7 +1,9 @@
-Trivia App 🎯
+## Trivia App 🎯
+
 This is my first React + Vite + TypeScript project, built during my Full Stack Developer formation at BeCode. The app is a Quiz Trivia Game that generates random questions from the Trivia API. It features a smooth interface, animated UI, and a "Last Played" section to track recent games.
 
-🚀 Features
+## 🚀 Features
+
 React + Vite + TypeScript – Fast development with modern JavaScript tooling.
 Trivia API Integration – Fetches real-time trivia questions from an external API.
 React Router – Enables seamless navigation across different game pages.
@@ -18,7 +20,8 @@ Local Storage – Saves previous game results for quick access.
 Lottie React – Handles animated success/failure feedback.
 Tailwind CSS – Modern, utility-first CSS framework for styling.
 @headlessui/react – Used for interactive modals and settings UI.
-🔧 Installation & Usage
+
+## 🔧 Installation & Usage
 The project will be deployed soon! In the meantime, you can run it locally:
 
 1️⃣ Clone the repository
