@@ -90,7 +90,7 @@ export const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen flex w-full items-center justify-center text-center bg-gradient-to-r from-purple-900 to-blue-400 relative">
+    <div className="min-h-screen flex w-full items-center justify-center text-center bg-gradient-to-r from-black to-purple-500 relative">
       {stepPage === 1 && (
         <div>
           <Lottie animationData={lottieOpen} loop={true} className="w-96" />

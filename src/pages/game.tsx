@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import succesAnimation from "../assets/lotties/triviasuccess.json";
 import failureAnimation from "../assets/lotties/triviafailure.json";
+import { Rank } from "../components/rank";
 
 export function GamePage() {
   const location = useLocation();
   const { questions, settings } = location.state || {};
   const [score, setScore] = useState(0);
   const navigate = useNavigate();
+  const [rankModalInfo, setRankModalInfo] = useState(false);
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<string[]>([]);
@@ -19,6 +21,10 @@ export function GamePage() {
   const [answerResult, setAnswerResult] = useState<
     "success" | "failure" | null
   >(null);
+
+  const handleRankModal = () => {
+    setRankModalInfo(true);
+  };
 
   useEffect(() => {
     if (questions && questions.length > 0) {
@@ -103,9 +109,11 @@ export function GamePage() {
   };
 
   return (
-    <div className="min-h-screen flex w-full flex-col items-center justify-center text-center bg-gradient-to-r from-purple-900 to-blue-400 relative">
+    <div className="min-h-screen flex w-full flex-col items-center justify-center text-center bg-gradient-to-r from-black to-purple-500 relative">
       <div className="absolute w-full px-10 top-10 flex flex-rows items-center justify-between text-white ">
-        <div className="flex flex-col justify-center items-center gap-1 cursor-pointer">
+        <div
+          className="flex flex-col justify-center items-center gap-1 cursor-pointer"
+          onClick={handleRankModal}>
           <PiRankingDuotone size={60} />
           <div>Last Played</div>
         </div>
@@ -184,6 +192,7 @@ export function GamePage() {
           />
         </div>
       )}
+      <Rank modalInfo={rankModalInfo} setModalInfo={setRankModalInfo} />
     </div>
   );
 }
