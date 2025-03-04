@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+Trivia App 🎯
+This is my first React + Vite + TypeScript project, built during my Full Stack Developer formation at BeCode. The app is a Quiz Trivia Game that generates random questions from the Trivia API. It features a smooth interface, animated UI, and a "Last Played" section to track recent games.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+React + Vite + TypeScript – Fast development with modern JavaScript tooling.
+Trivia API Integration – Fetches real-time trivia questions from an external API.
+React Router – Enables seamless navigation across different game pages.
+Local Storage – Stores and displays the last 10 played games.
+Lottie Animations – Smooth UI animations for answer validation.
+Tailwind CSS – Clean and responsive UI styling.
+@headlessui/react – Implements accessible modal components.
+🛠️ Technologies Used
+React + Vite – Core frontend framework and fast build tool.
+TypeScript – Adds type safety and better development experience.
+React Router – Enables navigation between home, game, and settings pages.
+Trivia API – Provides dynamic and random quiz questions.
+Local Storage – Saves previous game results for quick access.
+Lottie React – Handles animated success/failure feedback.
+Tailwind CSS – Modern, utility-first CSS framework for styling.
+@headlessui/react – Used for interactive modals and settings UI.
+🔧 Installation & Usage
+The project will be deployed soon! In the meantime, you can run it locally:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1️⃣ Clone the repository
+sh
+Copy
+Edit
+git clone https://github.com/your-username/trivia-app.git
+2️⃣ Navigate to the project folder
+sh
+Copy
+Edit
