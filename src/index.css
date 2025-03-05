@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Your custom styles */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -10,6 +11,7 @@
     transform: translateY(0px);
   }
 }
+
 .fade-in {
   display: inline-block;
   opacity: 0;
