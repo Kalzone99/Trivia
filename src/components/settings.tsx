@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from "react";
+import { SetStateAction } from "react";
 import { Modal } from "./modal";
 import { ModalHeader } from "./modalHeader";
 import { categories } from "../utils/categories";

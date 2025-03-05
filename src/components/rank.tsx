@@ -21,7 +21,7 @@ export function Rank({ modalInfo, setModalInfo }: RankProps) {
   useEffect(() => {
     if (modalInfo) {
       const storedHistory = JSON.parse(
-        localStorage.getItem("quizHistory") || []
+        (localStorage.getItem("quizHistory") as string) || ""
       );
       setLastGames(storedHistory);
     }
